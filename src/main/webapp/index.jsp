@@ -10,6 +10,6 @@
 </head>
 <body>
 <h1>Welcome to Spring MVC!</h1>
-<span>Using programmatic context xml and controllers.</span>
+<span>Using programmatic context xml and controllers.</span> ${message}
 </body>
 </html>

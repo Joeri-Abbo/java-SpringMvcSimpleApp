@@ -1,16 +1,22 @@
 package com.skillsoft.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
 
-public class MessageDisplayController implements Controller {
+@Controller
+public class MessageDisplayController {
 
-    @Override
-    public ModelAndView handleRequest(HttpServletRequest request,
-             HttpServletResponse response) throws Exception {
-        return new ModelAndView("home");
+    @RequestMapping(value = "/hi")
+    public ModelAndView hi(Model model) {
+        model.addAttribute("message", "Hi there!");
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping(value = "/begin")
+    public ModelAndView beginLearning(Model model) {
+        model.addAttribute("message", "Let's begin learning!");
+        return new ModelAndView("index");
     }
 }
