@@ -9,7 +9,8 @@ import org.springframework.web.servlet.mvc.Controller;
 public class MessageDisplayController implements Controller {
 
     @Override
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public ModelAndView handleRequest(HttpServletRequest request,
+             HttpServletResponse response) throws Exception {
         return new ModelAndView("home");
     }
 }
