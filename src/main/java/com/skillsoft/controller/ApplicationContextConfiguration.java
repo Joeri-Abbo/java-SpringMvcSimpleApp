@@ -20,5 +20,4 @@ public class ApplicationContextConfiguration {
     public Controller getMessageDisplayController() {
         return new MessageDisplayController();
     }
-
 }
