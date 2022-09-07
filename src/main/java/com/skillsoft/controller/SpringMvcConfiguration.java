@@ -10,17 +10,21 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+
 @EnableWebMvc
 @ComponentScan(basePackages = "com.skillsoft")
 @Configuration
-public class SpringMvcConfiguration  implements WebMvcConfigurer{
-
+public class SpringMvcConfiguration implements WebMvcConfigurer {
+   
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/home/");
+        viewResolver.setPrefix("/");
         viewResolver.setSuffix(".jsp");
+        
         return viewResolver;
     }
+
 }

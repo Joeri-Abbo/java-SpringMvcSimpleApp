@@ -18,7 +18,7 @@
 
 <h1>Welcome to Spring MVC!</h1>
 
-<span>We're going to explore a brand new world. </span> ${message}
+<span>Using application context XML and controllers.</span>
 
 </body>
 

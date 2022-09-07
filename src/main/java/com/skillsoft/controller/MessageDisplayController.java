@@ -8,15 +8,20 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MessageDisplayController {
 
-    @RequestMapping(value = "/hi")
-    public ModelAndView hi(Model model) {
-        model.addAttribute("message", "Hi there!");
-        return new ModelAndView("index");
-    }
+	@RequestMapping(value = "/hi")
+	public ModelAndView sayHi(Model model) {
 
-    @RequestMapping(value = "/begin")
-    public ModelAndView beginLearning(Model model) {
-        model.addAttribute("message", "Let's begin learning!");
-        return new ModelAndView("index");
-    }
+		model.addAttribute("message", "Hi there!");
+		
+		return new ModelAndView("index");
+	}
+
+	@RequestMapping(value = "/begin")
+	public ModelAndView beginLearning(Model model) {
+		
+		model.addAttribute("message", "Let's begin learning");
+		
+		return new ModelAndView("index");
+	}
+
 }
